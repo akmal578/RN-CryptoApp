@@ -1,18 +1,11 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  FlatList,
-  TouchableOpacity,
-  Image,
-  Touchable,
-} from 'react-native';
+import { View, Text, FlatList, TouchableOpacity, Image } from 'react-native';
 
 import { COLORS, SIZES, FONTS, icons } from '../constants';
 
 const TransactionHistory = ({ customContainerStyle, history }) => {
   //Flatlist item
-  const renderItem = ({ item }) => {
+  const renderItem = ({ item }) => (
     <TouchableOpacity
       style={{
         flexDirection: 'row',
@@ -47,8 +40,8 @@ const TransactionHistory = ({ customContainerStyle, history }) => {
           style={{ width: 20, height: 20, tintColor: COLORS.gray }}
         />
       </View>
-    </TouchableOpacity>;
-  };
+    </TouchableOpacity>
+  );
 
   return (
     <View

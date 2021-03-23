@@ -12,8 +12,7 @@ import {
 } from 'react-native';
 
 import { dummyData, COLORS, SIZES, FONTS, icons, images } from '../constants';
-import PriceAlert from '../components/PriceAlert';
-import TransactionHistory from '../components/TransactionHistory';
+import { PriceAlert, TransactionHistory } from '../components';
 
 const Home = ({ navigation }) => {
   const [trending, setTrending] = useState(dummyData.trendingCurrencies);
@@ -21,9 +20,9 @@ const Home = ({ navigation }) => {
     dummyData.transactionHistory
   );
 
-  //   useEffect(() => {
-  //     LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
-  //   }, []);
+  useEffect(() => {
+    LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
+  }, []);
 
   const renderItem = ({ item, index }) => (
     <TouchableOpacity
