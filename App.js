@@ -1,6 +1,10 @@
 import React from 'react';
 import { CryptoDetail, Transaction } from './screens';
-import { createStackNavigator } from '@react-navigation/stack';
+import {
+  createStackNavigator,
+  CardStyleInterpolators,
+  TransitionPresets,
+} from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'react-native';
 //Status bar: 'default', 'dark-content', 'light-content'
@@ -24,8 +28,23 @@ const App = () => {
         initialRouteName={'Home'}
       >
         <Stack.Screen name="Home" component={Tabs} />
-        <Stack.Screen name="CryptoDetail" component={CryptoDetail} />
-        <Stack.Screen name="Transaction" component={Transaction} />
+
+        <Stack.Screen
+          name="CryptoDetail"
+          component={CryptoDetail}
+          options={{
+            // ...TransitionPresets.SlideFromRightIOS, // work same as below
+            cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+          }}
+        />
+        <Stack.Screen
+          name="Transaction"
+          component={Transaction}
+          options={{
+            // ...TransitionPresets.SlideFromRightIOS, // work same as below
+            cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

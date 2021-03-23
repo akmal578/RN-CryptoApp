@@ -6,7 +6,7 @@ import {
 } from '@react-navigation/bottom-tabs';
 import LinearGradient from 'react-native-linear-gradient';
 
-import { Home } from '../screens';
+import { Home, CryptoDetail, Transaction } from '../screens';
 import { COLORS, FONTS, icons } from '../constants';
 
 const Tab = createBottomTabNavigator();

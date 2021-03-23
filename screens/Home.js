@@ -34,9 +34,10 @@ const Home = ({ navigation }) => {
         marginRight: SIZES.radius,
         borderRadius: 10,
         backgroundColor: COLORS.white,
-        ...styles.shadow,
-        marginBottom: 15,
+        ...styles.shadow, //Add shadow on android
+        marginBottom: 15, //Room for shadow to work
       }}
+      onPress={() => navigation.navigate('CryptoDetail', { currency: item })}
     >
       {/* Currency bitcoin, XRP */}
       <View style={{ flexDirection: 'row' }}>
