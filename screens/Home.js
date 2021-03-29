@@ -115,7 +115,7 @@ const Home = ({ navigation }) => {
           {/* Balance */}
           <View style={{ alignItems: 'center', justifyContent: 'center' }}>
             <Text style={{ color: COLORS.white, ...FONTS.h3 }}>
-              Your Portfolio Balance
+              Your Account Balance
             </Text>
             <Text
               style={{
