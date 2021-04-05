@@ -16,7 +16,7 @@ const CryptoDetail = ({ navigation }) => {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <Text>CryptoDetail</Text>
+        <Text>CryptoDetails</Text>
         <TouchableOpacity onPress={() => navigation.navigate("Transaction")}>
           <Text>Navigate to Transaction</Text>
         </TouchableOpacity>
